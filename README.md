@@ -37,4 +37,20 @@ Requirements:
 			- term_ccy = "*" => matched to any input "termCcy"
 			- trader_tier = 0 => matched to any input "traderTier"
 			- "amount" must be within range of from_amount and to_amount, if from_amount = to_amount = 0 => matched to any input "amount"
+			
+- Give instruction using postman on how to use the API. (Bonus)
+
+For uploading CSV 1. POST MAPPING :: http://localhost:8080/upload 
+	> Under body tab. Select form-data. Give file as key and browse CSV from computer.
+
+For downloading CSV 2. GET MAPPING :: http://localhost:8080/download
+
+For finding the data from Margin 3. POST MAPPING :: http://localhost:8080/find
+	payload:: {
+    "instruction": "*",
+    "baseCcy": "USD",
+    "termCcy": "SGD",
+    "traderTier": 170,
+    "amount": 50000
+}
       
